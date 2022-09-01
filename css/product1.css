@@ -1,0 +1,106 @@
+body {
+    background-image: url("../images/bg1.jpg");
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.navbar .navbar-nav .nav-link {
+    display: block;
+    color: rgb(60, 175, 75);
+    padding-right: 20px;
+    padding-left: 20px;
+    font-weight: 1000;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.navbar-brand {
+    display: block;
+    margin-left: 47%;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: white;
+}
+
+.navbar-logo-centered .navbar-nav .nav-link {
+    padding: 0.5em 1em;
+}
+
+.ti-facebook,
+.ti-youtube {
+    display: inline-block;
+    color: white;
+    font-size: 1.3rem;
+    margin-top: 10px;
+    padding-right: 10px;
+}
+.btn .btn-success{
+  font-size: 1rem;
+  font-weight: normal;
+}
+h3{
+  text-align: start;
+  font-size: 25px;
+}
+.img_text-item{
+  position: relative;
+}
+.d-block .w-100{
+  width: 75px;
+}
+.row_column2-2{
+  text-align:start;
+}
+.column_bt{
+  list-style: none;
+  display: flex;
+}
+.column_img-text{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.column_text{
+  list-style: none;
+  display: flex;
+  margin-left: 10px;
+}
+.sale{
+  text-decoration: line-through;
+  padding-top: 10px;
+  font-size: 20px;
+}
+.btn .btn-secondary{
+  font-size: 15px;
+  color: #277932;
+}
+.container{
+  padding-bottom: 45px;
+  padding-top: 30px;
+}
+.row .justify-content-evenly{
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+.col_2{
+  padding-top: 30px;
+}
+.footer{
+  background-color: #016b37;
+  padding-top: 24px;
+}
+.grid_row{
+  display: flex;
+}
+.footer_list{
+  padding-left: 65px;
+  padding-top: 55px;
+}
+.footer_list-item{
+  color: #f3f3f3;
+}
+
+
+
+  

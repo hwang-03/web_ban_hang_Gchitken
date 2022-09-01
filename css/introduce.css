@@ -1,0 +1,170 @@
+.container{
+    width: 1110px!important;
+}
+
+.body{
+    background-image: url(../images/bg1.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	color: white;
+    min-height: 100vh;
+}
+.bg-banner{
+    width: 100%;
+    background-image: url(../images/banner3f.jpg);
+    background-size: cover;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.bg-banner p{
+    font-size: 2.25rem;
+    font-weight: 400;
+	font-family: 'Alfa Slab One', cursive;
+    color: white;
+}
+.bg-banner img{
+    width: 120px;
+}
+
+.title-banner{
+    text-align: center;
+    max-width: 36%;
+    font-weight: 400;
+	font-family: 'Alfa Slab One', cursive;
+    color: #3caf4b;
+    font-size: 1.5rem;
+}
+.talk{
+    display: flex;
+    justify-content: center;
+}
+.first-talk{
+    text-align: center;
+    font-size: 1.15rem;
+    font-family: 'Alfa Slab One', cursive;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 25px;
+}
+
+.first-talk img{
+    padding: 25px 0;
+}
+
+.video{
+    width: 100%;
+    height: 600px;
+    padding-bottom: 50px;
+}
+
+.title-content{
+    text-align: center;
+}
+.title-content .feed-img,.title-content .food-img{
+    width: 90px;
+}
+.title-content .farm-img{
+    width: 150px;
+}
+.title-content .title{
+    font-weight: 1000;
+    font-size: 5rem;
+}
+.title-content .talk{
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: #3caf4b;
+}
+.row-content{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+.content{
+    padding-bottom: 50px;
+}
+
+.content .feed-cont{
+    height: 750px;
+}
+
+.content .farm-cont{
+    height: 650px;
+}
+
+.content .food-cont{
+    height: 600px;
+}
+
+.content .plus-cont{
+    height: 600px;
+}
+
+.content .text span{
+    color: #3caf4b;
+}
+
+.content .text .p1{
+    padding-top: 10px;
+    color: #979797;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.content .text .p2{
+    padding-top: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1200px) {
+	.container{
+		width: 100%!important;
+	}
+
+    .content .feed-cont,.content .plus-cont,.content .food-cont,.content .farm-cont{
+        height: 1000px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+	.container{
+		width: 100%!important;
+	}
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .content .feed-cont,.content .plus-cont,.content .food-cont,.content .farm-cont{
+        width: 100%;
+    }
+   
+    .content img{
+       width: 100%;
+    }
+    
+    .content .text{
+        background-color: white;
+        color: black;
+        margin-left: 0px!important;
+    }
+}
+
+@media screen and (min-width: 980px) {
+    .content img{
+        width: 550px;
+       
+    }
+    
+    .content .text{
+        background-color: white;
+        color: black;
+        margin-left: -15px!important;
+    }
+}

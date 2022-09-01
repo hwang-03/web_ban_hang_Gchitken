@@ -1,0 +1,27 @@
+body{
+    background-image: url("../images/bg1.jpg");
+    background-repeat: no-repeat;
+    color: white;
+}
+h1{
+    font-weight: 900;
+}
+h5{
+    color: rgb(17, 181, 17);
+    font-weight: 900;
+}
+li{
+    font-size: 10px;
+    list-style: none;
+}
+.hotline{
+    font-size: 20px;
+    font-weight: 900;
+}
+.direct{
+    display: inline-block;
+    align-items: center;
+    margin-top: -37px;
+    height: 50.5px;
+
+}

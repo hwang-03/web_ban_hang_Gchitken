@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Gkitchen</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../css/reset.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <!-- CSS only -->
+  <link rel="stylesheet" href="../css/navandfooter.css">
+  <link rel="stylesheet" href="../user/accountmanagement.css">
+  <link rel="stylesheet" href="../icon/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="./admin.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- header -->
+
+  .<div class="container-fluid bg-secondary  " style="margin-top: -25px;">
+    <div class="row ">
+      <div class="col-md-3">
+        <img id="logo" src="../images/logo.png" alt="">
+
+
+      </div>
+      <div class="col-md-9   ">
+        <div class="div1">
+          <h1>Trang quản trị website</h1>
+          <div class="dropdown">
+            <a class="btn dropdown-toggle bg-success" href="#" role="button" id="dropdownMenuLink"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="name">Thai</span>
+            </a>
+            <ul class="dropdown-menu  " aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="../html/profile.html">Thông tin cá nhân</a></li>
+              <li><a class="dropdown-item" href="../html/changepassword.html">Đổi mật khẩu</a></li>
+              <li><a class="dropdown-item" href="../index.html">Đăng xuất</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- body -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-11">
+        <h2 style="font-weight: 900;">Danh mục quản lý</h2>
+      </div>
+      <!-- tab -->
+      <div class="d-flex  menutab   ">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <button class="nav-link active" id="v-pills-product-tab" data-bs-toggle="pill"
+            data-bs-target="#v-pills-product" type="button" role="tab" aria-controls="v-pills-product"
+            aria-selected="true">Quản lý sản phẩm</button>
+          <button class="nav-link" id="v-pills-type-tab" data-bs-toggle="pill" data-bs-target="#v-pills-type"
+            type="button" role="tab" aria-controls="v-pills-type" aria-selected="false">Quản lý danh mục sản
+            phẩm</button>
+          <button class="nav-link" id="v-pills-account-tab" data-bs-toggle="pill" data-bs-target="#v-pills-account"
+            type="button" role="tab" aria-controls="v-pills-account" aria-selected="false">Quản lý tài khoản</button>
+          <button class="nav-link" id="v-pills-post-tab" data-bs-toggle="pill" data-bs-target="#v-pills-post"
+            type="button" role="tab" aria-controls="v-pills-post" aria-selected="false">Quản lý bài viết</button>
+          <button class="nav-link" id="v-pills-order-tab" data-bs-toggle="pill" data-bs-target="#v-pills-order"
+            type="button" role="tab" aria-controls="v-pills-order" aria-selected="false">Quản lý đơn hàng</button>
+          <button class="nav-link" id="v-pills-promotion-tab" data-bs-toggle="pill" data-bs-target="#v-pills-promotion"
+            type="button" role="tab" aria-controls="v-pills-promotion" aria-selected="false">Quản lý khuyễn mãi</button>
+          <button class="nav-link" id="v-pills-themes-tab" data-bs-toggle="pill" data-bs-target="#v-pills-themes"
+            type="button" role="tab" aria-controls="v-pills-themes" aria-selected="false">Quản lý giao diện</button>
+          <button class="nav-link" id="v-pills-customer-tab" data-bs-toggle="pill" data-bs-target="#v-pills-customer"
+            type="button" role="tab" aria-controls="v-pills-customer" aria-selected="false">Quản lý khách hàng</button>
+          <button class="nav-link" id="v-pills-business-tab" data-bs-toggle="pill" data-bs-target="#v-pills-business"
+            type="button" role="tab" aria-controls="v-pills-business" aria-selected="false">Quản lý doanh số</button>
+
+        </div>
+
+        <!-- 1    -->
+
+        <div class="tab-content   " id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="v-pills-product" role="tabpanel"
+            aria-labelledby="v-pills-product-tab">
+            <div class="add-product">
+              <div class="list-product">
+                <label>Tên sản phẩm:</label>
+                <input type="text" name="" id="name_sp">
+              </div>
+              <div class="list-product">
+                <label>Ảnh sản phẩm:</label>
+                <input style="color:aliceblue;" type="file" name="" id="images_sp" accept="image/*">
+              </div>
+              <div class="list-product">
+                <label>Số lượng:</label>
+                <input type="text" name="" id="numbers_sp">
+              </div>
+              <div class="list-product">
+                <label>Giá sản phẩm:</label>
+                <input type="text" name="" id="price_sp">
+              </div>
+              <div class="">
+                <button class="btn-add bg-success" id="btn_themsp" onclick="themsp()">Thêm sản phẩm</button>
+              </div>
+            </div>
+            <div>
+              <div id="list_sp">
+                <table class="table table-dark table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Tên sản phẩm</th>
+                      <th scope="col">Ảnh sản phẩm</th>
+                      <th scope="col">Số lượng</th>
+                      <th scope="col">Giá sản phẩm</th>
+                      <th scope="col">Sửa/Xóa</th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+              <div id="form-edit-sp"></div>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="tab-pane fade" id="v-pills-type" role="tabpanel" aria-labelledby="v-pills-account-tab">
+            <div class="add-type">
+              <div class="list-type">
+                <label>Tên danh mục:</label>
+                <input type="text" name="" id="name_dm">
+              </div>
+              <div class="">
+                <button class="btn-add bg-success">Thêm danh mục</button>
+              </div>
+            </div>
+            <div>
+              <table class="table table-dark table-striped">
+
+                <thead>
+                  <tr>
+                    <th scope="col">Danh mục</th>
+                    <th scope="col">Sửa/Xoá</th>
+                    <th scope="col">Thêm sản phẩm vào danh mục </th>
+               
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="col">HEO - BÒ - CÁ - TRỨNG</th>
+                    <th scope="col">Sửa Xoá</th>
+                    <th scope="col"><button class="btn-add bg-success" onclick="open_modal()">Thêm sản phẩm vào danh mục</button></th>
+
+                  
+                  </tr>
+                  <tr>
+                    <th scope="col">MÁT - ĐÔNG</th>
+                    <th scope="col">Sửa Xoá</th>
+                    <th scope="col"><button class="btn-add bg-success" onclick="open_modal()">Thêm sản phẩm vào danh mục</button></th>
+            
+                  </tr> <tr>
+                    <th scope="col">ĐỒ KHÔ - ĂN VẶT</th>
+                    <th scope="col">Sửa Xoá</th>
+                    <th scope="col"><button class="btn-add bg-success" onclick="open_modal()">Thêm sản phẩm vào danh mục</button></th>
+            
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal">
+              <div>
+                <table class="table table-dark table-striped">
+
+                  <thead>
+                    <tr>
+                      <th scope="col">Sản phẩm</th>
+                      <th scope="col">Ảnh</th>
+                      <th scope="col">Hiển thị</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="col">Trứng que phô mai kéo sợi EGGY 180g</th>
+                      <th scope="col"><img src="../images/prop1.webp" alt="" width="100" height="100"></th>
+                      <th scope="col">
+                        <input type="checkbox" name="" value="Hiển thị">
+                      </th>
+                    
+                    </tr>
+                    <tr>
+                      <th scope="col">Trứng que 3 lớp EGGY 180g</th>
+                      <th scope="col"><img src="../images/prop2.webp" alt="" width="100" height="100"></th>
+                      <th scope="col">
+                        <input type="checkbox" name="" value="Hiển thị">
+                      </th>
+              
+                    </tr> 
+                    <tr>
+                      <th scope="col">Trứng que hải sản rau củ EGGY 180</th>
+                      <th scope="col"><img src="../images/prop3.webp" alt="" width="100" height="100"></th>
+                      <th scope="col">
+                        <input type="checkbox" name="" value="Hiển thị">
+                      </th>
+              
+                    </tr>
+                    <tr>
+                      <th scope="col">Phá lấu vị tương đen 150g</th>
+                      <th scope="col"><img src="../images/prop4.webp" alt="" width="100" height="100"></th>
+                      <th scope="col">
+                        <input type="checkbox" name="" value="Hiển thị">
+                      </th>
+              
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div style="display: flex;">
+                <button class="btn-add bg-success" onclick="save_modal()">Lưu</button> 
+                <button class="btn-add bg-success" onclick="close_modal()">Huỷ</button>
+              </div>
+            </div>
+         
+          </div>
+
+
+
+
+          <!-- 3 -->
+          <div class="tab-pane fade" id="v-pills-account" role="tabpanel" aria-labelledby="v-pills-account-tab">
+            <div class="add-account">
+              <div class="list-account">
+                <label>Tên tài khoản:</label>
+                <input type="text" name="" id="idAccount">
+              </div>
+              <div class="list-account">
+                <label>Họ tên:</label>
+                <input type="text" name="" id="nameAccount">
+              </div>
+              <div class="list-account">
+                <label>Số điện thoại/email:</label>
+                <input type="text" name="" id="numbersAccount">
+              </div>
+              <div class="list-account">
+                <label>Mật khẩu:</label>
+                <input type="text" name="" id="passwordAccount">
+              </div>
+              <div class="">
+                <button class="btn-add bg-success" id="btn_themacc" onclick="themacc()">Thêm tài khoản</button>
+              </div>
+            </div>
+            <div>
+              <div id="list_acc">
+                <table class="table table-dark table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Họ tên</th>
+                      <th scope="col">Tên tài khoản</th>
+                      <th scope="col">Mật khẩu</th>
+                      <th scope="col">Số điện thoại/email</th>
+                      <th scope="col">Sửa/Xóa</th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+              <div id="form-edit-acc"></div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+          <!-- 3 -->
+          <div class="tab-pane fade" id="v-pills-post" role="tabpanel" aria-labelledby="v-pills-post-tab">
+            <div class="add-posts">
+              <div class="list-posts">
+                <label>Tên bài viết:</label>
+                <input type="text" name="" id="name">
+              </div>
+              <div class="list-posts">
+                <label>Ảnh bài viết:</label>
+                <input style="color:aliceblue;" type="file" name="" id="images" accept="image/*">
+              </div>
+              <div class="list-posts">
+                <label>Nội dung:</label>
+                <input type="text" name="" id="numbers">
+              </div>
+
+              <div class="">
+                <button class="btn-add bg-success">Thêm bài viết</button>
+              </div>
+            </div>
+            <div>
+              <table class="table table-dark table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Tiêu đề</th>
+                    <th scope="col">Ảnh bài viết</th>
+                    <th scope="col">Nội dung</th>
+                    <th scope="col">Thời gian đăng</th>
+                    <th scope="col">Sửa/Xóa</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+          </div>
+
+
+
+          <!-- 4 -->
+
+          <div class="tab-pane fade" id="v-pills-order" role="tabpanel" aria-labelledby="v-pills-order-tab">
+            <div>
+              <table class="table table-dark table-striped">
+
+                <thead>
+                  <tr>
+                    <th scope="col">Mã đơn hàng</th>
+                    <th scope="col">Mã khách hàng</th>
+                    <th scope="col">Ngày in hoá đơn</th>
+                    <th scope="col">Tổng tiền</th>
+                    <th scope="col">Xem chi tiết</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="col">ĐH01</th>
+                    <th scope="col">KH1</th>
+                    <th scope="col">13/06/2022</th>
+                    <th scope="col">1.500.000</th>
+                    <th scope="col"><a href="./invoice_details.html">Xem chi tiết</a></th>
+                  </tr>
+                  <tr>
+                    <th scope="col">ĐH02</th>
+                    <th scope="col">KH2</th>
+                    <th scope="col">20/06/2022</th>
+                    <th scope="col">345.000</th>
+                    <th scope="col"><a href="">Xem chi tiết</a></th>
+                  </tr>
+                  <tr>
+                    <th scope="col">ĐH03</th>
+                    <th scope="col">KH3</th>
+                    <th scope="col">20/06/2022</th>
+                    <th scope="col">400.000</th>
+                    <th scope="col"><a href="">Xem chi tiết</a></th>
+                  </tr>
+                  <tr>
+                    <th scope="col">ĐH04</th>
+                    <th scope="col">KH4</th>
+                    <th scope="col">20/06/2022</th>
+                    <th scope="col">400.000</th>
+                    <th scope="col"><a href="">Xem chi tiết</a></th>
+                  </tr>
+                  <tr>
+                    <th scope="col">ĐH05</th>
+                    <th scope="col">KH1</th>
+                    <th scope="col">20/06/2022</th>
+                    <th scope="col">400.000</th>
+                    <th scope="col"><a href="">Xem chi tiết</a></th>
+                  </tr>
+                  <tr>
+                    <th scope="col">ĐH06</th>
+                    <th scope="col">KH6</th>
+                    <th scope="col">20/06/2022</th>
+                    <th scope="col">400.000</th>
+                    <th scope="col"><a href="">Xem chi tiết</a></th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+
+
+
+
+
+          <!-- 5  -->
+          <div class="tab-pane fade" id="v-pills-promotion" role="tabpanel" aria-labelledby="v-pills-promotion-tab">
+            <div class="add-posts">
+              <div class="list-posts">
+                <label>Tên khuyến mãi:</label>
+                <input type="text" name="" id="name_km">
+              </div>
+              <div class="list-posts">
+                <label>Ảnh khuyến mãi:</label>
+                <input style="color:aliceblue;" type="file" name="" id="images_km" accept="image/*">
+              </div>
+              <div class="list-posts">
+                <label>Nội dung:</label>
+                <input type="text" name="" id="numbers_km">
+              </div>
+
+              <div class="">
+                <button class="btn-add bg-success">Thêm khuyến mãi</button>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+
+
+
+          <!-- 6 -->
+          <div class="tab-pane fade" id="v-pills-themes" role="tabpanel" aria-labelledby="v-pills-themes-tab">
+            <div class="add-posts">
+              <div class="list-posts">
+                <label>Ảnh logo:</label>
+                <input style="color:aliceblue;" type="file" name="" id="images" accept="image/*">
+
+              </div>
+              <div class="list-posts">
+                <label>Ảnh banner:</label>
+                <input style="color:aliceblue;" type="file" name="" id="images" accept="image/*">
+              </div>
+              <div class="list-posts">
+                <label>Ảnh trang trí</label>
+                <input style="color:aliceblue;" type="file" name="" id="images" accept="image/*">
+
+              </div>
+
+              <div class="">
+                <button class="btn-add bg-success">Lưu</button>
+              </div>
+            </div>
+          </div>
+          <!-- 7 -->
+          <div class="tab-pane fade" id="v-pills-customer" role="tabpanel" aria-labelledby="v-pills-customer-tab">
+            <div>
+              <table class="table table-dark table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Mã khách hàng</th>
+                    <th scope="col">Tên khách hàng</th>
+                    <th scope="col">Số điện thoại</th>
+                    <th scope="col">Tên tài khoản</th>
+                    <th scope="col">Địa chỉ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="col">KH01</th>
+                    <th scope="col">Đình Thái</th>
+                    <th scope="col">036666888</th>
+                    <th scope="col">thai13</th>
+                    <th scope="col">Hà Nội</th>
+                  </tr>
+                  <tr>
+                    <th scope="col">KH02</th>
+                    <th scope="col">Phương Liên</th>
+                    <th scope="col">0366662222i</th>
+                    <th scope="col">pikachu2003</th>
+                    <th scope="col">Hà Nam</th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- 8 -->
+          <div class="tab-pane fade" id="v-pills-business" role="tabpanel" aria-labelledby="v-pills-settings-business">
+            <canvas id="myChart" style="width:100%;max-width:1000px;"></canvas>
+
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  <!-- footer -->
+  <div class="container-fluid bg-success footer footer1 ">
+    <div class="row">
+      <div class="col-md-2 col-sm-12">
+      </div>
+      <div class="col-md-4 mt-4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-exclamation-lg"
+          viewBox="0 0 16 16">
+          <path
+            d="M7.005 3.1a1 1 0 1 1 1.99 0l-.388 6.35a.61.61 0 0 1-1.214 0L7.005 3.1ZM7 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z" />
+        </svg>
+        <a href="" class="linkfooter" style="font-size: 1.3rem; font-weight: 500;"> CHÍNH SÁCH CHUNG</a>
+      </div>
+      <div class=" col-md-4 mt-4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+          class="bi bi-person-bounding-box" viewBox="0 0 16 16">
+          <path
+            d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z" />
+          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+        </svg>
+        <a href="" class="linkfooter" style="font-size: 1.3rem; font-weight: 500;"> CHÍNH SÁCH THÀNH VIÊN</a>
+      </div>
+    </div>
+
+    <div class="row mt-n5">
+      <div class="col-md-2 text-end">
+        <img src="../images/logo.png" style="width: 200px; height: 200px;" alt="">
+      </div>
+      <div class="col-md-4 ">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-shield-check"
+          viewBox="0 0 16 16">
+          <path
+            d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z" />
+          <path
+            d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+        </svg>
+        <a href="" class="linkfooter" style="font-size: 1.3rem; font-weight: 500;"">BẢO MẬT THÔNG TIN</a>
+        </div>   
+      <div class=" col-md-4 ">
+        <svg xmlns=" http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart4"
+          viewBox="0 0 16 16">
+          <path
+            d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+          </svg>
+          <a href="" class=" linkfooter" style="font-size: 1.3rem; font-weight: 500;"">CHÍNH SÁCH MUA HÀNG</a>
+      </div>
+    </div> 
+    <div class=" row mt-auto">
+            <div class="col-md-2 text-end">
+
+            </div>
+            <div class="col-md-4 ">
+              <l style="font-size: 1.7rem; font-weight:900;">CÔNG TY TNHH FEDDY</l>
+            </div>
+            <div class=" col-md-4 mt-4 ">
+              <l style="font-size: 1.7rem; font-weight: 900;"> LIÊN HỆ</l>
+            </div>
+      </div>
+      <div class="row ">
+        <div class="col-md-2 text-end">
+        </div>
+        <div class="col-md-4 mt-n3">
+          <h6 class="address">
+            72-74 Nguyễn Thị Minh Khai, P.Võ Thị Sáu, Q.3, Tp.HCM
+          </h6>
+          <h6 class="address">
+            Mã số doanh nghiệp: 0314082490
+          </h6>
+          <h6 class="address">
+            Giấy chứng nhận đăng ký kinh doanh cấp ngày 26/10/2016
+          </h6>
+        </div>
+        <div class=" col-md-4  ">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-telephone-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+          </svg>
+          <span>Hotline: 1900 1708</span> <br>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-envelope-open-fill" viewBox="0 0 16 16">
+            <path
+              d="M8.941.435a2 2 0 0 0-1.882 0l-6 3.2A2 2 0 0 0 0 5.4v.314l6.709 3.932L8 8.928l1.291.718L16 5.714V5.4a2 2 0 0 0-1.059-1.765l-6-3.2ZM16 6.873l-5.693 3.337L16 13.372v-6.5Zm-.059 7.611L8 10.072.059 14.484A2 2 0 0 0 2 16h12a2 2 0 0 0 1.941-1.516ZM0 13.373l5.693-3.163L0 6.873v6.5Z" />
+          </svg>
+          <span>Email: info@feddy.com.vn
+          </span>
+        </div>
+        <div class="col-md-2 mb-5 ">
+          <a href="http://online.gov.vn/Home/WebDetails/52831"> <img src="../images/check.png"
+              style="width: 200px; height: 100px;" alt=""></a>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"></script>
+    <script src="./admin.js"></script>
+    <script src="../js/chart.js"></script>
+</body>
+
+</html>

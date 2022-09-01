@@ -1,0 +1,330 @@
+.body{
+	background-image: url(../images/bg1.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	color: white;
+}
+
+.uppercase{
+	text-transform: uppercase;
+}
+
+.container{
+	width: 1110px!important;
+}
+
+.banner img{
+	width: 100%;
+	object-fit: cover;
+}
+
+.hotdeal,.hbct,.matdong,.anvat{
+	display: flex;
+	justify-content: space-between;
+}
+
+.title{
+	display: flex;
+	justify-content: space-around;
+	font-size: 1.5rem;
+	font-weight: 400;
+	font-family: 'Alfa Slab One', cursive;
+}
+
+.title-line{
+	width: 8px;
+	background-color: #3caf4b
+}
+
+.title-label{
+	margin-left: 12px;
+}
+
+.container a{
+	color: #3caf4b!important;
+	text-decoration:  none!important;
+}
+
+.product{
+	background-color: rgba(23, 23, 23, 0.5);
+	
+}
+
+.product-list-1{
+	height: 27rem;
+}
+
+.product-list-1 img{
+    height: 11.32rem;
+}
+.product-list-1 button{
+	padding-bottom: 75px;
+}
+
+.carousel-control-prev{
+	margin-left:-50px;
+	width: 20px!important;
+}
+
+.carousel-control-prev:hover{
+	color:#026c3a!important;
+	cursor: pointer;
+}
+
+.carousel-control-next{
+	margin-right:-50px;
+	width: 20px!important;
+}
+
+.carousel-control-next:hover{
+	color:#026c3a!important;
+	cursor: pointer;
+}
+
+.product-list-1 .price{
+	border-top: 1px solid black;
+	border-radius: 5%;
+	padding-top: 15px;
+	height: 5rem;
+	display: flex;
+	justify-content: space-around;
+}
+
+.product-list-1 .product-item{
+	border-radius: 2%;
+	background-color: #292a2f;
+	margin: 15px 3px 100px 3px;
+	text-align: center;
+}
+
+.product-list-1 .product-item:hover{
+	border-radius: 2%;
+	background-color: #026c3a;
+	margin: 15px 3px 100px 3px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.product-list-1 .product-item p,.product-list-1 .product-seemore p{
+	height: 3rem;
+}
+
+.product-list-1 .off-price{
+	color: #3caf4b;
+	font-family: 'Alfa Slab One', cursive;
+	margin-bottom: -20px;
+}
+
+.product-list-1 .old-price{
+	text-decoration: line-through;
+}
+
+.product-list-1 .page-bar{
+	padding-bottom: 30px;
+}
+
+.product-list-1 .product-seemore{
+	border-radius: 2%;
+	background-color: #292a2f;
+	margin: 15px 3px 100px 3px;
+	text-align: center;
+}
+
+.product-list-1 .product-seemore:hover{
+	cursor: pointer;
+}
+
+.product-seemore img{
+	padding-top: 120px;
+}
+
+.seemore{
+	width: 70px;
+}
+
+.product-seemore p{
+	color: #3caf4b;
+}
+
+.product-seemore .none{
+	padding-top: 15px;
+	height: 5rem;
+}
+
+.cart{
+    background-image: url(../images/cart.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 4.25rem;
+    height: 3.25rem;
+    transition: all 0.2s linear 0s;
+}
+
+.flex{
+	display: flex;
+}
+
+.search-block{
+	background-color: #171717;
+}
+
+.search{
+	height: 40px;
+}
+
+.search .search-div{
+	height: 35px!important;
+}
+
+.search input{
+	width: 100%;
+	color: white;
+    outline: none;
+	border: 1px solid rgb(88, 89, 98);
+	box-sizing: border-box;
+	border-radius: 5px 0px 0px 5px;
+	background-color: #292a2f;
+}
+
+.search .button-search{
+	background-color: #3caf4b;
+	width: 3.5rem;
+}
+
+.search .button-search:hover{
+	background-color: #026c3a;
+	cursor: pointer;
+}
+
+.footer{
+	background-color: #016b37;
+	color: white;
+	font-family: 'Alfa Slab One', cursive;
+}
+.footer .logo img{
+	width: 12rem;
+}
+
+.footer .logo{
+	padding-top: 50px;
+	text-align: right;
+	vertical-align: middle;
+}
+
+.footer .thongbao img{
+	width: 10rem;
+}
+
+.footer a:hover{
+	text-decoration: underline;
+}
+
+.footer a{
+	color: white!important;
+	text-decoration: none;
+}
+
+.footer .line1,.footer .line2{
+	padding: 40px 20px 20px 0px;
+
+}
+
+.footer .row1,.footer .row2{
+	padding-left: 70px;
+}
+
+.footer .policy{
+	font-size: 1rem;
+	font-family: 'Fredoka One', cursive;
+}
+
+.footer .footer-title{
+	font-size:20px;
+}
+
+.footer p{
+	font-size:14px!important;
+}
+
+.footer .icon{
+	width:20px;
+}
+
+@media screen and (max-width: 748px) {
+	.container{
+		width: 100%!important;
+	}
+	.product, .product-2{
+		padding-bottom: 42rem!important;
+	}
+	.product-item{
+		display: none;
+	}
+
+	.carousel-indicators,.carousel-control-prev,.carousel-control-next{
+		display: none!important;
+	}
+
+	.first-prop{
+		display: block!important;
+	}
+	.prop-block{
+		display: block!important;
+		margin-top: -5rem!important;
+	}
+
+	.cont-hotdeal .title-label, .cont-HBCT .title-label,.cont-matdong .title-label,.cont-anvat .title-label {
+		font-size: 1rem;
+	}
+
+	.footer .logo{
+		text-align: center;
+	}
+
+	.footer .info{
+		display: block;
+	}
+
+	.footer div{
+		width: 100%;
+	}
+
+	.footer .thongbao{
+		text-align: right;
+	}
+
+}
+
+@media screen and (max-width: 993px) {
+	.container{
+		width: 100%!important;
+	}
+
+	.product, .product-2{
+		padding-bottom: 30rem;
+	}
+
+	.footer .thongbao img{
+		width: 8rem;
+	}
+
+}
+
+@media screen and (max-width: 1000px) {
+	.col-md{
+		width: 50%!important;
+	}
+}
+/* anh them vao gio hang */
+.img-fly{
+	position: absolute;
+	z-index: 99999999999999;
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 100%;
+	border: 1px, solid,red;
+	transition: all 1s ease;
+
+}

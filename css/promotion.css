@@ -1,0 +1,25 @@
+body{
+    background-image: url("../images/bg1.jpg");
+    background-repeat: no-repeat;
+    color: white;
+}
+a{
+    text-decoration: none;
+}
+.gpromotion{
+    margin-right: 40px;
+}
+h5{
+    color: rgb(17, 215, 17);
+}
+p{
+    color: white;
+}
+.other{
+    display: flex;
+    justify-content:end;
+    color: rgb(17, 215, 17)
+}
+.other:hover{
+    color: rgb(17, 215, 17)
+}

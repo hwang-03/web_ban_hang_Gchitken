@@ -1,0 +1,67 @@
+body{
+	background-image: url(../images/bg1.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	color: rgb(9, 243, 9);
+}
+#admin{
+	color: rgb(9, 243, 9);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-left: 5rem;
+}
+.row{
+    width: 30rem;
+}
+div.sex > input{
+    width: 2rem;
+}
+label{
+    width: 8rem;
+    font-weight: bold;
+}
+
+#btnSave{
+    color: white;
+    display:flex;
+    justify-content: center;
+    width:3rem;
+}
+.row{
+    display:block;
+    border: 1px solid black;
+    padding: 1rem;
+    width: 20rem;
+    margin:2rem auto;
+    background-color: beige;
+}
+.col{
+    margin:1rem 0;
+}
+button{
+    border-radius: 0.2rem;
+    background-color: rgba(0,0,0,0);
+    border: 1.5px solid black;
+    margin: 0 auto;
+}
+input{
+    width:14rem;
+}
+h4{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+ul{
+    list-style: none;
+    display:flex;
+    justify-content: space-between;
+    padding:0;
+    width:14rem;
+}

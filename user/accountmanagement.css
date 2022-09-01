@@ -1,0 +1,39 @@
+.ti-use{
+    font-size: 50px;
+    color: aliceblue;
+}
+.nav-link{
+    color: rgb(15, 241, 15);
+}
+.menutab{
+    margin-left: 100px;
+}
+.tab-content{
+    margin-left: 50px;
+    
+}
+.nav-pills{
+    width: 300px;
+
+}
+.tab-pane{
+    width: 1000px;
+    height: 1000px;
+}
+.photoG{
+    margin-left: 20% !important;
+   
+}
+.data{
+    margin-left: 44%;
+    margin-top: 5%;
+}
+.address{
+    height: 100px;
+    line-height: 100px;
+    border-style: dashed !important;
+    border-color: aqua !important;
+}
+input{
+    color: white;
+}

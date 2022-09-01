@@ -1,0 +1,25 @@
+.card,
+.bodycontent {
+    background-image: url("./images/bg1.jpg");
+    background-repeat: no-repeat;
+    color: white;
+  }
+.button{
+    margin-top: 50px;
+    border: 2px solid green;
+    border-radius: 10px;
+    color: rgb(12, 244, 12);
+    background-color: rgba(0, 0, 0, 0.501);
+}
+.button:hover{
+    background-color: rgb(7, 168, 7);
+    color: white;
+}
+.card{
+    background-image: url("./images/bgproduct.png") ;
+    background-repeat: no-repeat, repeat;
+    margin: 5px 90px;
+}
+.video{
+    margin-top: 150px;;
+}
